@@ -9,10 +9,10 @@ class RandomNumsController < ApplicationController
     elsif usernum > randnum
       render json: {
         message: "Too high!"
-        }
+      }
     else usernum == randnum
       render json: {
-        message: "You got it!"
+       message: "You got it!"
       }
     end
   end
