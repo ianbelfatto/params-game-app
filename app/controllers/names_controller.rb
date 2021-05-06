@@ -7,7 +7,7 @@ class NamesController < ApplicationController
       }
     else
     render json: {
-      message: "My name is #{my_name}!"
+      message: "Your name is #{my_name}!"
     } end
   end
 end
