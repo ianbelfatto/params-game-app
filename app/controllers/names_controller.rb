@@ -6,7 +6,7 @@ class NamesController < ApplicationController
         message: "Hey, your name starts with the first letter of the alphabet!"
       }
     else
-    render json: {
+      render json: {
       message: "Your name is #{my_name}!"
     } end
   end

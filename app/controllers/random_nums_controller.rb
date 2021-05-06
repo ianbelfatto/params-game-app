@@ -1,8 +1,19 @@
 class RandomNumsController < ApplicationController
   def randnum
-    randnum = params[:randnum].to_i
-    render json: {
-      message: "Random number is #{randnum}"
-    } 
+    randnum = 36
+    usernum = params[:usernum].to_i
+    if usernum < randnum
+      render json: {
+        message: "Too low!"
+      }
+    elsif usernum > randnum
+      render json: {
+        message: "Too high!"
+        }
+    else usernum == randnum
+      render json: {
+        message: "You got it!"
+      }
+    end
   end
 end
